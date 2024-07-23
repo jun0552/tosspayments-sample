@@ -6,12 +6,12 @@ import { useEffect, useState } from "react";
 // TODO: server.js 의 secretKey 또한 결제위젯 연동 키가 아닌 API 개별 연동 키의 시크릿 키로 변경해야 합니다.
 // TODO: 구매자의 고유 아이디를 불러와서 customerKey로 설정하세요. 이메일・전화번호와 같이 유추가 가능한 값은 안전하지 않습니다.
 // @docs https://docs.tosspayments.com/sdk/v2/js#토스페이먼츠-초기화
-const clientKey = "test_ck_D5GePWvyJnrK0W0k6q8gLzN97Eoq";
+const clientKey = "test_ck_kYG57Eba3GpQxQGj4pwkVpWDOxmA"; // 여기를 나의 클라이언트 키로 수정 
 const customerKey = generateRandomString();
 
 const amount = {
   currency: "KRW",
-  value: 50000,
+  value: 1,// 주 결제 공간 추후 값이 변경 될 공간
 };
 
 export function PaymentCheckoutPage() {
@@ -106,6 +106,8 @@ export function PaymentCheckoutPage() {
             validHours: 24,
           },
         });
+        
+        /*
       case "MOBILE_PHONE":
         await payment.requestPayment({
           method: "MOBILE_PHONE", // 휴대폰 결제
@@ -149,6 +151,8 @@ export function PaymentCheckoutPage() {
             country: "KR",
           },
         });
+
+        */
     }
   }
 

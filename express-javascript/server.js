@@ -103,6 +103,11 @@ app.post("/confirm/brandpay", function (req, res) {
       paymentKey: paymentKey,
       customerKey: customerKey,
     }),
+    /* 
+    본문에 요청한 값을 제대로 처리했는지 처리 유무
+    
+    
+    */
   }).then(async function (response) {
     const result = await response.json();
     console.log(result);

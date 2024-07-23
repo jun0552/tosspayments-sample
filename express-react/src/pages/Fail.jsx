@@ -22,12 +22,12 @@ export function FailPage() {
       </div>
 
       <div className="p-grid-col">
-        <Link to="https://docs.tosspayments.com/guides/v2/payment-widget/integration">
-          <button className="button p-grid-col5">연동 문서</button>
+        <Link to="#">
+          <button className="button p-grid-col5">메인으로 돌아가기</button>
         </Link>
-        <Link to="https://discord.gg/A4fRFXQhRu">
+        <Link to="#">
           <button className="button p-grid-col5" style={{ backgroundColor: "#e8f3ff", color: "#1b64da" }}>
-            실시간 문의
+            다시 결제하기
           </button>
         </Link>
       </div>
